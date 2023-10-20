@@ -3,8 +3,8 @@ import './Button.css';
 import PropTypes from 'prop-types';
 
 function Button(props) {
-    const { variant = 'primary', children, ...rest } = props;
-    return <button className={`button ${variant}`} {...rest}>{children}</button >;
+    const { variant = 'primary', size, children, ...rest } = props;
+    return <button className={`button ${variant} ${size}`} {...rest}>{children}</button >;
 }
 
 export default Button;
@@ -22,5 +22,5 @@ Button.propTypes = {
 
 
 Button.defaultProps = {
-    variant: 'primary', children: <></>
+    variant: 'primary', children: <></>, size: 'medium'
 };
